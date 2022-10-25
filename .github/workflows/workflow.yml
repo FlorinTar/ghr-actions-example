@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: run on docker
+      id: hello
+      uses: ./
+      with:
+        myInput: "Input ftom workflow"
+    - name: output
+      run: |
+        echo ${{ steps.hello.outputs.memory }}
