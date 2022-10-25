@@ -1,0 +1,16 @@
+name: "first container run"
+description: "Hello world!"
+author: "Batman"
+inputs:
+  myInput:
+    decription: "input description"
+    required: true
+    default: "This awesome input"
+
+output:
+  myOutput:
+    decription: "available memory"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
